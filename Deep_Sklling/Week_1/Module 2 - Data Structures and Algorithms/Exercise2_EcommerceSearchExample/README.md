@@ -1,236 +1,195 @@
-# Exercise 2: E-commerce Platform Search Function
+# Exercise 2 – E-commerce Platform Search Function
 
-## Objective
+## 📖 Overview
 
-The objective of this exercise is to understand and implement searching techniques used in an e-commerce platform. Search operations are fundamental in online shopping applications because customers frequently search for products by their identifiers, names, or categories. Efficient searching improves user experience and system performance.
+This exercise focuses on implementing efficient searching techniques for an e-commerce platform. Since customers frequently search for products using their **Product ID**, **Product Name**, or **Category**, selecting an appropriate searching algorithm is essential for improving application performance and user experience.
+
+The exercise demonstrates the implementation of **Linear Search** and **Binary Search**, compares their efficiency using **Big O Notation**, and evaluates which algorithm is more suitable for handling large product datasets.
 
 ---
 
-# 1. Understanding Asymptotic Notation
+## 🎯 Scenario
 
-## What is Big O Notation?
+You are working on the search functionality of an e-commerce platform. The search needs to be optimized for fast performance while handling a large number of products efficiently.
 
-Big O Notation is a mathematical representation used to describe the performance or efficiency of an algorithm as the size of the input increases.
+---
 
-It helps developers:
+## 🎯 Learning Objectives
 
-* Measure algorithm efficiency.
-* Compare different algorithms.
-* Predict performance for large datasets.
-* Optimize application response time.
+After completing this exercise, I was able to:
+
+- Understand Big O Notation and algorithm analysis.
+- Explain Best, Average, and Worst Case scenarios.
+- Create a Product class for searching.
+- Implement Linear Search.
+- Implement Binary Search.
+- Compare the performance of searching algorithms.
+- Analyze which algorithm is better suited for an e-commerce application.
+
+---
+
+# 🛠 Implementation Steps
+
+## Step 1 – Understanding Asymptotic Notation
+
+Studied **Big O Notation**, which measures the efficiency of algorithms based on input size.
+
+### Big O helps to:
+
+- Measure algorithm efficiency.
+- Compare different algorithms.
+- Predict performance on large datasets.
+- Optimize application response time.
 
 ### Common Time Complexities
 
-| Complexity | Name              | Performance |
-| ---------- | ----------------- | ----------- |
-| O(1)       | Constant Time     | Excellent   |
-| O(log n)   | Logarithmic Time  | Very Fast   |
-| O(n)       | Linear Time       | Moderate    |
-| O(n log n) | Linearithmic Time | Good        |
-| O(n²)      | Quadratic Time    | Slow        |
-| O(2ⁿ)      | Exponential Time  | Very Slow   |
+| Complexity | Description |
+|------------|-------------|
+| O(1) | Constant Time |
+| O(log n) | Logarithmic Time |
+| O(n) | Linear Time |
+| O(n log n) | Linearithmic Time |
+| O(n²) | Quadratic Time |
+| O(2ⁿ) | Exponential Time |
 
 ---
 
-# 2. Search Operation Scenarios
+## Step 2 – Product Class
 
-## Best Case
+Created a **Product** class containing:
 
-The desired element is found immediately.
+- Product ID
+- Product Name
+- Category
+
+These attributes are used during product search operations.
+
+---
+
+## Step 3 – Search Algorithms
+
+Implemented two searching algorithms:
 
 ### Linear Search
 
-The target is located at the first position.
-
-Complexity:
-
-O(1)
+- Searches elements sequentially.
+- Works on unsorted arrays.
+- Easy to implement.
 
 ### Binary Search
 
-The target is located exactly at the middle position.
+- Searches by repeatedly dividing the search space.
+- Requires the array to be sorted.
+- Faster than Linear Search for large datasets.
 
-Complexity:
+Products are stored:
 
-O(1)
+- In an array for Linear Search.
+- In a sorted array for Binary Search.
 
 ---
 
-## Average Case
+## Step 4 – Performance Analysis
 
-The target is found somewhere in the middle portion of the dataset.
+Compared the efficiency of both algorithms using Big O Notation.
 
 ### Linear Search
 
-Approximately n/2 comparisons.
-
-Complexity:
-
-O(n)
-
-### Binary Search
-
-Approximately log₂(n) comparisons.
-
-Complexity:
-
-O(log n)
-
----
-
-## Worst Case
-
-The target is either located at the last position or does not exist.
-
-### Linear Search
-
-All elements are examined.
-
-Complexity:
-
-O(n)
+| Case | Complexity |
+|------|------------|
+| Best | O(1) |
+| Average | O(n) |
+| Worst | O(n) |
 
 ### Binary Search
 
-Search space is repeatedly divided in half.
-
-Complexity:
-
-O(log n)
-
----
-
-# 3. Product Class
-
-The Product class represents items available on the e-commerce platform.
-
-Attributes:
-
-* ProductId
-* ProductName
-* Category
-
-Example:
-
-| Product ID | Product Name | Category    |
-| ---------- | ------------ | ----------- |
-| 101        | Laptop       | Electronics |
-| 102        | Mobile       | Electronics |
-| 103        | Shoes        | Fashion     |
+| Case | Complexity |
+|------|------------|
+| Best | O(1) |
+| Average | O(log n) |
+| Worst | O(log n) |
 
 ---
 
-# 4. Linear Search
+# 📊 Algorithm Comparison
 
-## Definition
-
-Linear Search sequentially checks every element until the desired item is found.
-
-### Algorithm
-
-1. Start from the first element.
-2. Compare the target with the current element.
-3. If matched, return the element.
-4. Otherwise move to the next element.
-5. Continue until found or end of array is reached.
-
-### Time Complexity
-
-| Case    | Complexity |
-| ------- | ---------- |
-| Best    | O(1)       |
-| Average | O(n)       |
-| Worst   | O(n)       |
-
-### Advantages
-
-* Simple to implement.
-* Works on unsorted data.
-* No preprocessing required.
-
-### Disadvantages
-
-* Slow for large datasets.
-* Requires checking many elements.
+| Feature | Linear Search | Binary Search |
+|---------|---------------|---------------|
+| Data Requirement | Unsorted | Sorted |
+| Best Case | O(1) | O(1) |
+| Average Case | O(n) | O(log n) |
+| Worst Case | O(n) | O(log n) |
+| Large Dataset Performance | Slow | Fast |
+| Ease of Implementation | Easy | Moderate |
 
 ---
 
-# 5. Binary Search
+# 📂 Project Structure
 
-## Definition
-
-Binary Search repeatedly divides a sorted dataset into halves until the target is found.
-
-### Prerequisite
-
-The array must be sorted.
-
-### Algorithm
-
-1. Find the middle element.
-2. Compare with target.
-3. If equal, return result.
-4. If target is smaller, search left half.
-5. If target is larger, search right half.
-6. Repeat until found or search space becomes empty.
-
-### Time Complexity
-
-| Case    | Complexity |
-| ------- | ---------- |
-| Best    | O(1)       |
-| Average | O(log n)   |
-| Worst   | O(log n)   |
-
-### Advantages
-
-* Extremely fast for large datasets.
-* Requires fewer comparisons.
-
-### Disadvantages
-
-* Data must be sorted.
-* Additional maintenance required when inserting records.
+```text
+Exercise_2-EcommerceSearch
+│
+├── Product.cs
+├── Program.cs
+├── README.md
+└── image.png
+```
 
 ---
 
-# 6. Comparison of Linear Search and Binary Search
+# 📂 Files Included
 
-| Feature                  | Linear Search | Binary Search |
-| ------------------------ | ------------- | ------------- |
-| Data Requirement         | Unsorted      | Sorted        |
-| Best Case                | O(1)          | O(1)          |
-| Average Case             | O(n)          | O(log n)      |
-| Worst Case               | O(n)          | O(log n)      |
-| Implementation           | Simple        | Moderate      |
-| Efficiency on Large Data | Low           | High          |
+| File | Description |
+|------|-------------|
+| Product.cs | Defines the Product class with Product ID, Product Name, and Category |
+| Program.cs | Implements Linear Search and Binary Search |
+| README.md | Project documentation |
+| image.png | Output screenshot |
 
 ---
 
-# 7. Suitability for E-Commerce Platform
+# 💡 Key Concepts Covered
 
-For a modern e-commerce platform containing thousands or millions of products, Binary Search is more suitable because it significantly reduces the number of comparisons required to locate a product.
-
-Example:
-
-For 1,000,000 products:
-
-Linear Search:
-
-* Up to 1,000,000 comparisons.
-
-Binary Search:
-
-* Approximately 20 comparisons.
-
-Therefore, Binary Search provides better scalability, faster response times, and improved customer experience.
-
-However, Binary Search requires products to be maintained in sorted order. For smaller or unsorted datasets, Linear Search remains a practical solution.
+- Big O Notation
+- Best, Average & Worst Case Analysis
+- Linear Search
+- Binary Search
+- Arrays
+- Searching Algorithms
+- Time Complexity
+- Algorithm Optimization
 
 ---
 
-# Conclusion
+# ▶️ Build and Run
 
-This exercise demonstrated the implementation and analysis of Linear Search and Binary Search algorithms. While Linear Search is simple and effective for small datasets, Binary Search offers superior performance for large-scale e-commerce applications due to its logarithmic time complexity. Understanding algorithm efficiency using Big O Notation helps developers select the most appropriate solution for real-world systems.
-## SCreenshots
-![alt text](image.png)
+```powershell
+cd "Exercise_2-EcommerceSearch"
+dotnet run
+```
+
+---
+
+# 📸 Output
+
+Refer to **image.png** for the execution result.
+
+---
+
+# 🏆 Analysis
+
+Linear Search is simple and suitable for small or unsorted datasets. However, it becomes inefficient as the number of products increases.
+
+Binary Search significantly reduces the number of comparisons by repeatedly dividing the search space into halves. Although it requires the data to be sorted, it offers much better performance for large datasets.
+
+For an e-commerce platform containing thousands or millions of products, **Binary Search** is the preferred choice because it provides faster search results and improves the overall user experience.
+
+---
+
+# ✅ Learning Outcome
+
+Successfully implemented **Linear Search** and **Binary Search**, analyzed their performance using **Big O Notation**, and understood why Binary Search is more efficient for large sorted datasets. This exercise strengthened my understanding of searching algorithms, algorithm analysis, and their practical applications in real-world software systems.
+
+---
+
+⭐ This exercise is part of the **Cognizant Digital Nurture 5.0 – Deep Skilling Program**.
