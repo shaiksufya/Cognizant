@@ -249,18 +249,4 @@ The following practical exercises were completed during this module:
 
 ---
 
-# 🚀 What's Next?
-
-After completing this module, the learning journey continues with:
-
-- Module 4 – NUnit and Moq
-- Module 5 – Entity Framework Core 8.0
-- Module 6 – ASP.NET Core Web API
-- Module 7 – Microservices Architecture
-- Module 8 – Angular
-
-These modules build upon SQL Server concepts to develop modern full-stack enterprise applications.
-
----
-
 ⭐ *This repository documents my learning journey through the Cognizant Digital Nurture 5.0 – Deep Skilling Program.*
