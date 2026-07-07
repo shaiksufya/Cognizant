@@ -154,6 +154,7 @@ O(1)
 ```text
 Exercise_7-FinancialForecasting
 │
+├── Exercise-07-Finanial_Forecast.csproj
 ├── Program.cs
 ├── README.md
 └── image.png
@@ -165,6 +166,7 @@ Exercise_7-FinancialForecasting
 
 | File | Description |
 |------|-------------|
+| Exercise-07-Finanial_Forecast.csproj | The .NET SDK how to build, compile, and run the project |
 | Program.cs | Implements the recursive financial forecasting algorithm |
 | README.md | Project documentation |
 | image.png | Output screenshot |
