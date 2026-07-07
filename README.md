@@ -288,7 +288,8 @@ COGNIZANT
 └── Deep_Skilling
     ├── Week_1
     │   ├── Module 1 - Design Patterns and Principles
-    │   └── Module 2 - Data Structures and Algorithms
+    │   ├── Module 2 - Data Structures and Algorithms
+    │   └── README.md
     │
     ├── Week_2
     │   ├── Module 3 - Advanced SQL Using SQL Server
@@ -296,30 +297,32 @@ COGNIZANT
     │
     ├── Week_3
     │   ├── Module_4_NUnit and Moq
-    │   └── Module_5_Entity_Framework_Core_8.0
+    │   ├── Module_5_Entity_Framework_Core_8.0
+    │   └── README.md
     │
     ├── Week_4
     │   ├── Module_6_ASP.NET_Core_Web_API
-    │   └── Module_7_Microservices_Architecture
+    │   ├── Module_7_Microservices_Architecture
+    │   └── README.md
     │
     ├── Week_5
     │   ├── Module_8_Angular
-    │   └── Module_9_Application_Debugging
+    │   ├── Module_9_Application_Debugging
+    │   └── README.md
     │
     ├── Week_6
     │   ├── Module_10_Git
-    │   └── Module_11_DevOps_and_CI_CD
+    │   ├── Module_11_DevOps_and_CI_CD
+    │   └── README.md
     │
     ├── Week_7
     │   ├── Module_12_Docker
     │   ├── Module_13_Agile_Methodology
-    │   └── Module_14_Generative_AI
+    │   ├── Module_14_Generative_AI
+    │   └── README.md
     │
     └── README.md
 ```
-
----
-
 # 🌱 Continuous Learning
 
 This repository will continue to be updated with:
