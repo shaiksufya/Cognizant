@@ -129,7 +129,7 @@ Compared the efficiency of both algorithms using Big O Notation.
 ```text
 Exercise_2-EcommerceSearch
 │
-├── Product.cs
+├── Exercise-02-Searching.csproj
 ├── Program.cs
 ├── README.md
 └── image.png
@@ -141,7 +141,7 @@ Exercise_2-EcommerceSearch
 
 | File | Description |
 |------|-------------|
-| Product.cs | Defines the Product class with Product ID, Product Name, and Category |
+| Exercise-02-Searching.csproj | It tells the .NET SDK how to build and run your project. |
 | Program.cs | Implements Linear Search and Binary Search |
 | README.md | Project documentation |
 | image.png | Output screenshot |
