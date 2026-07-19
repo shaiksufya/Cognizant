@@ -13,17 +13,7 @@ This project demonstrates Unit Testing in .NET using the NUnit framework. The ap
 * Verify expected results using Assert.That().
 * Execute and manage tests through Visual Studio Test Explorer.
 
-## Project Structure
 
-CalculatorSolution
-
-├── CalcLibrary
-
-│ └── Calculator.cs
-
-└── CalcLibrary.Tests
-
-└── CalculatorTests.cs
 
 ## Technologies Used
 
