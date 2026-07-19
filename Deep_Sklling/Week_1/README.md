@@ -373,29 +373,79 @@ After completing this module, I learned to:
 
 ---
 
-# ✅ Week 1 Summary
+---
 
-By completing Week 1, I gained a strong understanding of:
+# 📚 Module 4 – NUnit and Moq
 
-- SOLID Principles
-- Design Patterns
-- Data Structures
-- Searching Algorithms
-- Sorting Algorithms
-- Algorithm Analysis
-- Time & Space Complexity
-- Advanced SQL Programming
-- Window Functions
-- Common Table Expressions (CTEs)
-- Views & Indexes
-- Stored Procedures
-- User-Defined Functions (UDFs)
-- Triggers
-- Cursors
-- Exception Handling
-- Transaction Management
-- Query Optimization
-- Database Performance Optimization
+## 📖 Overview
+
+This module introduces **Unit Testing** using the **NUnit** framework and **Mocking** using **Moq**. It focuses on writing reliable, maintainable, and automated tests for .NET applications by testing individual components in isolation and mocking external dependencies.
+
+---
+
+## 🎯 Learning Objectives
+
+After completing this module, I learned to:
+
+- Understand the fundamentals and benefits of automated testing.
+- Write unit tests using the NUnit framework.
+- Apply Test-Driven Development (TDD) concepts.
+- Create reliable and maintainable test cases.
+- Use dependency injection to build testable applications.
+- Mock external dependencies using the Moq framework.
+- Improve application quality through effective unit testing.
+
+---
+
+## 📌 Topics Covered
+
+### Automated Testing
+
+- Introduction to Automated Testing
+- Benefits of Automated Testing
+- Types of Testing
+- Test Pyramid
+- Test-Driven Development (TDD)
+
+### NUnit Framework
+
+- Unit Testing Fundamentals
+- Test Fixtures
+- Assertions
+- Setup & Teardown
+- Parameterized Tests
+- Exception Testing
+- Code Coverage
+
+### Dependency Injection & Mocking
+
+- Dependency Injection (DI)
+- Loosely Coupled Design
+- Mocking with Moq
+- Mock Objects
+- State-Based Testing
+- Interaction Testing
+
+---
+
+## 💻 Hands-on
+
+- Created Unit Tests using NUnit.
+- Implemented Test-Driven Development (TDD) concepts.
+- Used Dependency Injection for testable code.
+- Mocked dependencies using the Moq framework.
+- Tested application logic with isolated unit tests.
+
+---
+
+## 📚 Learning Resources
+
+- https://www.geeksforgeeks.org/automation-testing-software-testing/
+- https://martinfowler.com/articles/practical-test-pyramid.html
+- https://www.geeksforgeeks.org/test-driven-development-tdd/
+- https://www.c-sharpcorner.com/article/introduction-to-nunit-testing-framework/
+- https://dotnettutorials.net/lesson/dependency-injection-design-pattern-csharp/
+- https://www.codemag.com/Article/2305041/Using-Moq-A-Simple-Guide-to-Mocking-for-.NET
 
 These concepts provide the foundation for developing efficient, maintainable, scalable, and high-performance software and database applications.
 
