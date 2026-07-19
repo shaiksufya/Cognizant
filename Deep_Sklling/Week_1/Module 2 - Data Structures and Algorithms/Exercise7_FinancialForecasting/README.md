@@ -1,219 +1,205 @@
-# Exercise 7: Financial Forecasting
+# Exercise 7 – Financial Forecasting
 
-## Objective
+## 📖 Overview
 
-The objective of this exercise is to understand recursion and apply it to financial forecasting. Financial forecasting helps organizations estimate future values such as revenue, investments, savings, or stock prices based on historical growth rates.
+This exercise demonstrates the implementation of **Recursion** to predict future financial values based on historical growth rates. Financial forecasting is widely used in investment planning, revenue estimation, business growth prediction, and retirement planning. The exercise focuses on understanding recursive algorithms, implementing a recursive forecasting solution, analyzing its time complexity, and exploring optimization techniques.
 
 ---
-# Screenshot
-![alt text](image.png)
 
-# 1. Understanding Recursive Algorithms
+## 🎯 Scenario
 
-## What is Recursion?
+You are developing a financial forecasting tool that predicts future financial values based on past growth rates. The application should calculate the forecasted value recursively while maintaining simplicity and correctness.
 
-Recursion is a programming technique in which a method calls itself to solve a smaller version of the same problem.
+---
+
+## 🎯 Learning Objectives
+
+After completing this exercise, I was able to:
+
+- Understand the concept of recursion.
+- Differentiate between the base case and recursive case.
+- Implement a recursive algorithm for financial forecasting.
+- Analyze the time and space complexity of recursive algorithms.
+- Learn optimization techniques to improve recursive solutions.
+
+---
+
+# 🛠 Implementation Steps
+
+## Step 1 – Understanding Recursive Algorithms
+
+Studied recursion as a programming technique where a method calls itself to solve a smaller instance of the same problem.
 
 A recursive solution consists of:
 
 ### Base Case
 
-A condition that stops further recursive calls.
+The condition that stops further recursive calls.
 
 ### Recursive Case
 
-The part where the method calls itself with a smaller input.
+The part where the function calls itself with a smaller input until the base case is reached.
 
 ---
 
-## Example
+## Step 2 – Financial Forecast Method
 
-Factorial Calculation
+Created a recursive method that accepts:
 
-n! = n × (n-1)!
+- Initial Investment Amount
+- Annual Growth Rate
+- Number of Years
 
-Example:
-
-5! = 5 × 4 × 3 × 2 × 1
-
-Recursive definition:
-
-factorial(n) = n × factorial(n-1)
-
-Base case:
-
-factorial(1) = 1
+The method calculates the future value recursively until the required number of years is completed.
 
 ---
 
-## Advantages of Recursion
+## Step 3 – Recursive Formula
 
-* Simplifies complex problems.
-* Produces cleaner and shorter code.
-* Naturally fits divide-and-conquer algorithms.
-* Useful for tree and graph traversals.
+The recursive formula used is:
 
----
+```
+FutureValue(n) = FutureValue(n-1) × (1 + GrowthRate)
+```
 
-## Disadvantages of Recursion
+### Base Case
 
-* Additional memory usage due to function call stack.
-* Can cause stack overflow for large inputs.
-* May perform redundant calculations if not optimized.
+```
+FutureValue(0) = InitialValue
+```
 
----
+### Recursive Case
 
-# 2. Financial Forecasting Problem
-
-Suppose an investment grows by a fixed percentage every year.
-
-Example:
-
-Initial Value = ₹10,000
-
-Growth Rate = 10%
-
-Years = 3
-
-Calculation:
-
-Year 1:
-
-10000 × 1.10 = 11000
-
-Year 2:
-
-11000 × 1.10 = 12100
-
-Year 3:
-
-12100 × 1.10 = 13310
-
-Future Value = ₹13,310
+```
+FutureValue(n) = FutureValue(n-1) × (1 + GrowthRate)
+```
 
 ---
 
-# 3. Recursive Approach
+## Step 4 – Performance Analysis
 
-Let:
+Analyzed the recursive solution based on:
 
-FV(n) = Future value after n years
+- Time Complexity
+- Space Complexity
+- Stack Memory Usage
 
-Formula:
-
-FV(n) = FV(n-1) × (1 + growthRate)
-
-Base Case:
-
-FV(0) = Initial Value
-
-Recursive Case:
-
-FV(n) = FV(n-1) × (1 + growthRate)
+Also studied optimization techniques to improve recursive performance.
 
 ---
 
-# 4. Algorithm
-
-1. Accept initial investment amount.
-2. Accept annual growth rate.
-3. Accept number of years.
-4. If years = 0, return current value.
-5. Otherwise:
-
-   * Calculate next year's value.
-   * Recursively forecast remaining years.
-6. Return final predicted value.
-
----
-
-# 5. Time Complexity Analysis
+# 📊 Complexity Analysis
 
 ## Recursive Solution
 
-For each year, exactly one recursive call is made.
+| Complexity | Value |
+|------------|-------|
+| Time Complexity | O(n) |
+| Space Complexity | O(n) |
 
-Example:
-
-Forecast(3)
-
-→ Forecast(2)
-
-→ Forecast(1)
-
-→ Forecast(0)
-
-Number of calls = n
-
-Time Complexity:
-
-O(n)
-
-Space Complexity:
-
-O(n)
-
-because each recursive call occupies stack memory.
+Each recursive call processes one forecasting year and occupies stack memory until the base case is reached.
 
 ---
 
-# 6. Optimization Techniques
+# 🚀 Optimization Techniques
 
-## Tail Recursion
+To improve performance, the recursive solution can be optimized using:
 
-Pass the current forecast value as a parameter.
+### Tail Recursion
 
-Benefits:
+- Passes the current calculated value as a parameter.
+- Reduces intermediate computations.
 
-* Reduces intermediate calculations.
-* More efficient recursive structure.
+### Iterative Approach
 
----
-
-## Iterative Approach
-
-Instead of recursion:
-
-for each year:
-
-value = value × (1 + growthRate)
+- Eliminates recursive stack overhead.
+- Uses constant space.
 
 Time Complexity:
 
+```
 O(n)
+```
 
 Space Complexity:
 
+```
 O(1)
+```
 
-This eliminates recursive stack overhead.
+### Memoization
 
----
-
-## Memoization
-
-Store previously calculated results.
-
-Useful when recursive calls repeat calculations.
-
-Time Complexity:
-
-Can improve significantly in overlapping-subproblem scenarios.
+- Stores previously computed results.
+- Prevents redundant calculations.
+- Improves efficiency when overlapping subproblems exist.
 
 ---
 
-# 7. Practical Applications
+# 💡 Key Concepts Covered
 
-Financial forecasting is widely used for:
-
-* Investment planning
-* Retirement savings estimation
-* Revenue forecasting
-* Stock market projections
-* Business growth prediction
+- Recursion
+- Base Case
+- Recursive Case
+- Financial Forecasting
+- Time Complexity
+- Space Complexity
+- Tail Recursion
+- Memoization
+- Iterative Optimization
 
 ---
 
-# Conclusion
+# 📂 Project Structure
 
-This exercise demonstrated the use of recursion in financial forecasting. The recursive algorithm repeatedly calculates future values based on annual growth rates until the desired forecast period is reached. While recursion provides a clean and intuitive solution, it consumes additional stack memory. For large forecasting periods, iterative solutions or optimized recursive techniques are generally preferred.
+```text
+Exercise_7-FinancialForecasting
+│
+├── Exercise-07-Finanial_Forecast.csproj
+├── Program.cs
+├── README.md
+└── image.png
+```
+
+---
+
+# 📂 Files Included
+
+| File | Description |
+|------|-------------|
+| Exercise-07-Finanial_Forecast.csproj | The .NET SDK how to build, compile, and run the project |
+| Program.cs | Implements the recursive financial forecasting algorithm |
+| README.md | Project documentation |
+| image.png | Output screenshot |
+
+---
+
+# ▶️ Build and Run
+
+```powershell
+cd "Exercise_7-FinancialForecasting"
+dotnet run
+```
+
+---
+
+# 📸 Output
+
+Refer to **image.png** for the execution result.
+
+---
+
+# 🏆 Analysis
+
+The recursive approach provides a simple and intuitive solution for financial forecasting by repeatedly applying the annual growth rate until the desired forecast period is reached.
+
+Although recursion makes the implementation easier to understand, each recursive call consumes stack memory. For larger forecasting periods, iterative solutions or optimized recursive techniques such as tail recursion and memoization are generally preferred because they improve performance and reduce memory usage.
+
+---
+
+# ✅ Learning Outcome
+
+Successfully implemented a recursive financial forecasting solution and gained practical experience in applying recursion to real-world financial problems. This exercise improved my understanding of recursive algorithms, complexity analysis, and optimization techniques such as tail recursion, iteration, and memoization.
+
+---
+
+⭐ This exercise is part of the **Cognizant Digital Nurture 5.0 – Deep Skilling Program**.
