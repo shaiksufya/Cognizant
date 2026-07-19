@@ -1,0 +1,14 @@
+@host = http://localhost:5180
+
+###
+POST {{host}}/api/Auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+###
+GET {{host}}/api/Secure
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE3ODQ0ODgwNzMsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6Ik15QXBpVXNlcnMifQ.nljEiAzDaX_DcWjCjSLeCazRR1HNisJnlMtysG3-EmU
